@@ -12,11 +12,12 @@ function router(nav){
 
     adminRouter.post('/add',function (req,res) {
         var item = {
-        title:req.body.title,
-        author: req.body.author,
-        genre: req.body.genre,
-        image: req.body.image
+            title:req.body.title,
+            author: req.body.author,
+            genre: req.body.genre,
+            image: req.body.image
         }
+        
         var book = Bookdata(item);
         book.save();
         res.redirect('/books');

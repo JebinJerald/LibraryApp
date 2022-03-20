@@ -4,13 +4,12 @@ mongoose.connect('mongodb+srv://userone:userone@ictakfiles.fsfqq.mongodb.net/LIB
 
 const Schema = mongoose.Schema;
 
-const BookSchema = new Schema({
+const AuthorSchema = new Schema({
     title: String,
-    author: String,
-    genre: String,
-    image: String
+    image: String,
+    about: String
 });
 
-var Bookdata = mongoose.model('bookdata',BookSchema);
+var Authordata = mongoose.model('authordata',AuthorSchema);
 
-module.exports = Bookdata;
+module.exports = Authordata;
